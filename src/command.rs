@@ -31,7 +31,6 @@ pub async fn run_command(command: &mut Command) -> Result<Output, Error> {
 
 pub async fn run_raw_command(raw_command: &str) -> Result<Output, Error> {
     let mut command = parse_raw_command(raw_command)?;
-
     Ok(run_command(&mut command).await?)
 }
 

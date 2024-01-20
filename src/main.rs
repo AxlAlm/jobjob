@@ -2,7 +2,7 @@ mod command;
 
 #[tokio::main]
 async fn main() {
-    let raw_command = "ls";
+    let raw_command = "ls -lgh";
     let output = command::run_raw_command(raw_command).await.unwrap();
 
     let stdout = String::from_utf8_lossy(&output.stdout);
